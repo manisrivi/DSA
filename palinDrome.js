@@ -4,18 +4,21 @@ const palinDrome = (x) => {
 
     let xCopy = x;
     let rev = 0;
-    
+
     while (x > 0) {
         let rem = x % 10;
         rev = (10 * rev) + rem;
         x = Math.floor(x / 10);
     }
 
-    if (rev == xCopy) {
+    if (rev === xCopy) {
         return true
     } else {
         return false
     }
+
+    // Optimize 
+    // return rev === xCopy
 
 }
 
